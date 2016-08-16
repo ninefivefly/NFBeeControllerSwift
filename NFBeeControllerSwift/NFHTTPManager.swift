@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 import AlamofireObjectMapper
 import ObjectMapper
+import MBProgressHUD
 
 class NFBaseResponse: Mappable {
     
