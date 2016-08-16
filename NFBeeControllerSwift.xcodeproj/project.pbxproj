@@ -7,14 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19E4CE7C881F70C4ED686FD0 /* Pods_NFBeeControllerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10E99E62BAA0A80E5BAB62D6 /* Pods_NFBeeControllerSwift.framework */; };
+		E0799F8C1D48BD39001F2A10 /* NFLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0799F8B1D48BD39001F2A10 /* NFLogger.swift */; };
+		E0799F901D4A0526001F2A10 /* SVProgressHUD+NFAddtion.m in Sources */ = {isa = PBXBuildFile; fileRef = E0799F8F1D4A0526001F2A10 /* SVProgressHUD+NFAddtion.m */; };
+		E0799F921D4B426C001F2A10 /* NFHTTPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0799F911D4B426C001F2A10 /* NFHTTPManager.swift */; };
 		E0A124AD1D473E0700968B20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A124AC1D473E0700968B20 /* AppDelegate.swift */; };
 		E0A124AF1D473E0700968B20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A124AE1D473E0700968B20 /* ViewController.swift */; };
 		E0A124B21D473E0700968B20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0A124B01D473E0700968B20 /* Main.storyboard */; };
 		E0A124B41D473E0800968B20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0A124B31D473E0800968B20 /* Assets.xcassets */; };
 		E0A124B71D473E0800968B20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0A124B51D473E0800968B20 /* LaunchScreen.storyboard */; };
+		E0A124C61D485F6800968B20 /* AlamofireSwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A124C51D485F6800968B20 /* AlamofireSwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10E99E62BAA0A80E5BAB62D6 /* Pods_NFBeeControllerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NFBeeControllerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3526801A66B386DD1749CF3C /* Pods-NFBeeControllerSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NFBeeControllerSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NFBeeControllerSwift/Pods-NFBeeControllerSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		D6E649CBCB85984B1B057D77 /* Pods-NFBeeControllerSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NFBeeControllerSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-NFBeeControllerSwift/Pods-NFBeeControllerSwift.release.xcconfig"; sourceTree = "<group>"; };
+		E0799F8B1D48BD39001F2A10 /* NFLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFLogger.swift; sourceTree = "<group>"; };
+		E0799F8D1D4A0523001F2A10 /* NFBeeControllerSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NFBeeControllerSwift-Bridging-Header.h"; sourceTree = "<group>"; };
+		E0799F8E1D4A0526001F2A10 /* SVProgressHUD+NFAddtion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD+NFAddtion.h"; sourceTree = "<group>"; };
+		E0799F8F1D4A0526001F2A10 /* SVProgressHUD+NFAddtion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SVProgressHUD+NFAddtion.m"; sourceTree = "<group>"; };
+		E0799F911D4B426C001F2A10 /* NFHTTPManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFHTTPManager.swift; sourceTree = "<group>"; };
 		E0A124A91D473E0600968B20 /* NFBeeControllerSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NFBeeControllerSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0A124AC1D473E0700968B20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0A124AE1D473E0700968B20 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +35,7 @@
 		E0A124B31D473E0800968B20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0A124B61D473E0800968B20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0A124B81D473E0800968B20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0A124C51D485F6800968B20 /* AlamofireSwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireSwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19E4CE7C881F70C4ED686FD0 /* Pods_NFBeeControllerSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		485AE9DD3BA1B80A849EE66A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				10E99E62BAA0A80E5BAB62D6 /* Pods_NFBeeControllerSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8C28CF9912C925AFB3773023 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3526801A66B386DD1749CF3C /* Pods-NFBeeControllerSwift.debug.xcconfig */,
+				D6E649CBCB85984B1B057D77 /* Pods-NFBeeControllerSwift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E0A124A01D473E0600968B20 = {
 			isa = PBXGroup;
 			children = (
 				E0A124AB1D473E0700968B20 /* NFBeeControllerSwift */,
 				E0A124AA1D473E0600968B20 /* Products */,
+				8C28CF9912C925AFB3773023 /* Pods */,
+				485AE9DD3BA1B80A849EE66A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,12 +88,18 @@
 		E0A124AB1D473E0700968B20 /* NFBeeControllerSwift */ = {
 			isa = PBXGroup;
 			children = (
+				E0799F8E1D4A0526001F2A10 /* SVProgressHUD+NFAddtion.h */,
+				E0799F8F1D4A0526001F2A10 /* SVProgressHUD+NFAddtion.m */,
+				E0A124C51D485F6800968B20 /* AlamofireSwiftyJSON.swift */,
 				E0A124AC1D473E0700968B20 /* AppDelegate.swift */,
 				E0A124AE1D473E0700968B20 /* ViewController.swift */,
+				E0799F8B1D48BD39001F2A10 /* NFLogger.swift */,
 				E0A124B01D473E0700968B20 /* Main.storyboard */,
 				E0A124B31D473E0800968B20 /* Assets.xcassets */,
 				E0A124B51D473E0800968B20 /* LaunchScreen.storyboard */,
 				E0A124B81D473E0800968B20 /* Info.plist */,
+				E0799F8D1D4A0523001F2A10 /* NFBeeControllerSwift-Bridging-Header.h */,
+				E0799F911D4B426C001F2A10 /* NFHTTPManager.swift */,
 			);
 			path = NFBeeControllerSwift;
 			sourceTree = "<group>";
@@ -71,9 +111,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E0A124BB1D473E0800968B20 /* Build configuration list for PBXNativeTarget "NFBeeControllerSwift" */;
 			buildPhases = (
+				BCF3C00154B807D9360045D7 /* 📦 Check Pods Manifest.lock */,
 				E0A124A51D473E0600968B20 /* Sources */,
 				E0A124A61D473E0600968B20 /* Frameworks */,
 				E0A124A71D473E0600968B20 /* Resources */,
+				A5D8469A1B55FEC99105F3C7 /* 📦 Embed Pods Frameworks */,
+				1B0DBE54ADB18914ED67C96B /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,12 +173,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1B0DBE54ADB18914ED67C96B /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NFBeeControllerSwift/Pods-NFBeeControllerSwift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5D8469A1B55FEC99105F3C7 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NFBeeControllerSwift/Pods-NFBeeControllerSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCF3C00154B807D9360045D7 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E0A124A51D473E0600968B20 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E0A124AF1D473E0700968B20 /* ViewController.swift in Sources */,
+				E0799F8C1D48BD39001F2A10 /* NFLogger.swift in Sources */,
+				E0799F901D4A0526001F2A10 /* SVProgressHUD+NFAddtion.m in Sources */,
+				E0799F921D4B426C001F2A10 /* NFHTTPManager.swift in Sources */,
+				E0A124C61D485F6800968B20 /* AlamofireSwiftyJSON.swift in Sources */,
 				E0A124AD1D473E0700968B20 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -247,23 +342,38 @@
 		};
 		E0A124BC1D473E0800968B20 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3526801A66B386DD1749CF3C /* Pods-NFBeeControllerSwift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+				);
 				INFOPLIST_FILE = NFBeeControllerSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-DDEBUG\"";
 				PRODUCT_BUNDLE_IDENTIFIER = mobile.ninefivefly.app.NFBeeControllerSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NFBeeControllerSwift/NFBeeControllerSwift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
 		E0A124BD1D473E0800968B20 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6E649CBCB85984B1B057D77 /* Pods-NFBeeControllerSwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = NFBeeControllerSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-DDEBUG\"";
 				PRODUCT_BUNDLE_IDENTIFIER = mobile.ninefivefly.app.NFBeeControllerSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NFBeeControllerSwift/NFBeeControllerSwift-Bridging-Header.h";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};
@@ -286,6 +396,7 @@
 				E0A124BD1D473E0800968B20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
