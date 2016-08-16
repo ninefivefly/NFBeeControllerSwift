@@ -19,7 +19,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>IQKeyboardManagerSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>JSONModel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -52,12 +62,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0920ACF74BA2E7DD948944698A17E50E</key>
+		<key>0BF8569A1D17D47E1A86EB020383E8D1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0BF8569A1D17D47E1A86EB020383E8D1</key>
+		<key>1520003FEBEC114D6C84F832AFEDB994</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>193BD78E780DE4BADB604A476D87E3A4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,27 +82,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>500339EEBC77DA65E49D5B3BF3304CD5</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>60A9C0E3B1DB351A89E4DB1A0062CBF9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8E57B0992C6E7AF3E03FF4F7157677D5</key>
+		<key>A35EEB196E4D5A67FFEA340823B9B983</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C1BB000F64A5AF628C349137555B6977</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>C5CBCAA97E951CC882334464FBDF983D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CE7A5F5A379D93FDBC2ED44A12EFD37C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DBA6001481CEA0EBA031CC5C94508FAA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

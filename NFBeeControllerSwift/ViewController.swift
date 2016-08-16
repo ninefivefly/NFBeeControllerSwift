@@ -24,36 +24,49 @@ public func printLog<T>(message: T,
     #endif
 }
 
-class WeatherResponse: Mappable {
+class WeatherResponse: NFBaseResponse {
     var location: String?
     var threeDayForecast: [Forecast]?
     
     required init?(_ map: Map){
-        
+        super.init(map)
     }
     
     class func test() {
         NFLogVerbose("类方法")
     }
     
-    func mapping(map: Map) {
+    override func mapping(map: Map) {
         location <- map["location"]
         threeDayForecast <- map["three_day_forecast"]
     }
 }
 
-class Forecast: Mappable {
+class ForecastBase: Mappable {
     var day: String?
+    
+    required init?(_ map: Map){
+        
+    }
+    
+    func mapping(map: Map) {
+        day <- map["day"]
+    }
+}
+
+class Forecast: ForecastBase {
+
     var temperature: Int?
     var conditions: String?
     var ss: String!
     
     required init?(_ map: Map){
         NFLogDebug(map)
+        super.init(map)
     }
     
-    func mapping(map: Map) {
-        day <- map["day"]
+    override func mapping(map: Map) {
+        super.mapping(map)
         temperature <- map["temperature"]
         conditions <- map["conditions"]
         ss <- map["ss"]
@@ -71,7 +84,7 @@ struct Point {
     }
 }
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, NFHTTPTaskDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         WeatherResponse.test()
@@ -117,28 +130,46 @@ class ViewController: UIViewController {
         
         
         
-        let URL = "https://raw.githubusercontent.com/tristanhimmelman/AlamofireObjectMapper/d8bb95982be8a11a2308e779bb9a9707ebe42ede/sample_json"
-        SVProgressHUD.showWithStatus("loading...")
-        SVProgressHUD.setDefaultStyle(.Dark)
-        let request = Alamofire.request(.GET, URL, parameters: ["ss": "qq"]).responseObject { (response: Response<WeatherResponse, NSError>) in
-            debugPrint(response.response)
-            SVProgressHUD.dismiss()
-            NFLogDebug(response.result.debugDescription)
-            
-            let weatherResponse = response.result.value
-            NFLogDebug(weatherResponse?.location)
-            
-            if let threeDayForecast = weatherResponse?.threeDayForecast {
-                for forecast in threeDayForecast {
-                    NFLogDebug(forecast.day)
-                    NFLogDebug(forecast.temperature)
-                }
-            }
-        }
-        NFLogDebug("-------------------->")
-        debugPrint(request)
+//        let URL = "https://raw.githubusercontent.com/tristanhimmelman/AlamofireObjectMapper/d8bb95982be8a11a2308e779bb9a9707ebe42ede/sample_json"
+//        SVProgressHUD.showWithStatus("loading...")
+//        SVProgressHUD.setDefaultStyle(.Dark)
+//        let request = Alamofire.request(.GET, URL, parameters: ["ss": "qq"]).responseObject { (response: Response<WeatherResponse, NSError>) in
+//            debugPrint(response.response)
+//            SVProgressHUD.dismiss()
+//            NFLogDebug(response.result.debugDescription)
+//            
+//            let weatherResponse = response.result.value
+//            NFLogDebug(weatherResponse?.location)
+//            
+//            if let threeDayForecast = weatherResponse?.threeDayForecast {
+//                for forecast in threeDayForecast {
+//                    NFLogDebug(forecast.day)
+//                    NFLogDebug(forecast.temperature)
+//                }
+//            }
+//        }
+//        NFLogDebug("-------------------->")
+//        debugPrint(request)
+//        
+//        let ss = UITableView()
+//        ss.delegate = self
+        
+        let task = NFHTTPTask<WeatherResponse>()
+        task.delegate = self
+        task.doRequest()
+        
+        /*
+         参数  url，method， 参数，T，
+         1. hud start
+         
+         
+         */
 
     }
+    
+//    func didExecuteFinish(action: String, tag: Int, response: NFBaseResponse?, error: NSError?) {
+//        NFLogDebug("adfasdfsafd")
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

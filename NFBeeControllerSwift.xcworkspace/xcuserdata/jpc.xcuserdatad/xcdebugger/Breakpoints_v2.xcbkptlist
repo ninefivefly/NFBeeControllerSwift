@@ -6,16 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Pods/AlamofireObjectMapper/AlamofireObjectMapper/AlamofireObjectMapper.swift"
-            timestampString = "491472049.373778"
+            filePath = "NFBeeControllerSwift/ViewController.swift"
+            timestampString = "493011193.297948"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "ObjectMapperSerializer(_:mapToObject:)"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "mapping(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

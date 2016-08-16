@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0920ACF74BA2E7DD948944698A17E50E"
+               BlueprintIdentifier = "CE7A5F5A379D93FDBC2ED44A12EFD37C"
                BuildableName = "Pods_NFBeeControllerSwift.framework"
                BlueprintName = "Pods-NFBeeControllerSwift"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0920ACF74BA2E7DD948944698A17E50E"
+            BlueprintIdentifier = "CE7A5F5A379D93FDBC2ED44A12EFD37C"
             BuildableName = "Pods_NFBeeControllerSwift.framework"
             BlueprintName = "Pods-NFBeeControllerSwift"
             ReferencedContainer = "container:Pods.xcodeproj">

@@ -13,5 +13,7 @@ target 'NFBeeControllerSwift' do
   pod 'AlamofireObjectMapper'
   pod 'Argo'
   pod 'SwiftDate'
+  pod 'MBProgressHUD'
+  pod 'IQKeyboardManagerSwift'
 
 end

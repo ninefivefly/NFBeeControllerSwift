@@ -3,3 +3,4 @@
 //
 
 #import "SVProgressHUD+NFAddtion.h"
+#import "MBProgressHUD+NFAddtion.h"
