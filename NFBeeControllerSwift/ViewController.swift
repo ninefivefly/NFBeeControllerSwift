@@ -154,9 +154,7 @@ class ViewController: UIViewController, NFHTTPTaskDelegate {
 //        let ss = UITableView()
 //        ss.delegate = self
         
-        let task = NFHTTPTask<WeatherResponse>()
-        task.delegate = self
-        task.doRequest()
+       
         
         /*
          参数  url，method， 参数，T，
@@ -164,12 +162,17 @@ class ViewController: UIViewController, NFHTTPTaskDelegate {
          
          
          */
+        NFLogDebug("qqqq")
 
     }
     
-//    func didExecuteFinish(action: String, tag: Int, response: NFBaseResponse?, error: NSError?) {
-//        NFLogDebug("adfasdfsafd")
-//    }
+    func parentViewForHUD(aciton: String) -> UIView? {
+        return self.view
+    }
+    
+    func didExecuteFinish(action: String, tag: Int, response: NFBaseResponse?, error: NSError?) {
+        NFLogDebug("adfasdfsafd")
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -177,5 +180,14 @@ class ViewController: UIViewController, NFHTTPTaskDelegate {
     }
 
 
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+       NFLogDebug("touchesBegan")
+    }
+    
+    @IBAction func didTapedButton(){
+        NFLogDebug("begain taske.")
+        let task = NFHTTPTask<WeatherResponse>("https://raw.githubusercontent.com/tristanhimmelman/AlamofireObjectMapper/d8bb95982be8a11a2308e779bb9a9707ebe42ede/sample_json", target: self, params: ["qq": "ss", "dd": "bb"], tag: 0, method:.GET)
+        task.doRequest()
+    }
 }
 
