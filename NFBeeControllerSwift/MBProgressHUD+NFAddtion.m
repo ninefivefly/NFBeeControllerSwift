@@ -11,6 +11,21 @@
 
 @implementation MBProgressHUD (NFAddtion)
 
++ (instancetype)appearance{
+    static dispatch_once_t onceToken;
+    static MBProgressHUD* instance = nil;
+    dispatch_once(&onceToken, ^{
+        instance = [[MBProgressHUD alloc]init];
+        instance.contentColor = [UIColor whiteColor];
+        instance.label.font = [UIFont systemFontOfSize:16];
+        instance.removeFromSuperViewOnHide = YES;
+        instance.bezelView.color = [UIColor blackColor];
+        instance.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
+        instance.bezelView.layer.cornerRadius = 10;
+    });
+    return instance;
+}
+
 + (void)load{
     method_exchangeImplementations(class_getInstanceMethod(self, @selector(showAnimated:)), class_getInstanceMethod(self, @selector(nf_showAnimated:)));
     method_exchangeImplementations(class_getInstanceMethod(self, @selector(hideAnimated:)), class_getInstanceMethod(self, @selector(nf_hideAnimated:)));
@@ -42,6 +57,32 @@
 }
 
 /**
+ *  创建一个定制的hud
+ *
+ *  @param text
+ *  @param view
+ *
+ *  @return
+ */
++ (instancetype)loadingHud:(NSString *)text view:(UIView *)view {
+    if (view == nil) {
+        return nil;
+    }
+    
+    MBProgressHUD *hud = [[MBProgressHUD alloc]initWithView:view];
+    hud.label.text = text;
+    hud.label.font = [MBProgressHUD appearance].label.font;
+    hud.bezelView.color = [MBProgressHUD appearance].bezelView.color;
+    hud.bezelView.style = [MBProgressHUD appearance].bezelView.style;
+    hud.bezelView.layer.cornerRadius = [MBProgressHUD appearance].bezelView.layer.cornerRadius;
+    hud.removeFromSuperViewOnHide = [MBProgressHUD appearance].removeFromSuperViewOnHide;
+    hud.contentColor = [MBProgressHUD appearance].contentColor;
+    [view addSubview:hud];
+    
+    return hud;
+}
+
+/**
  *  显示信息
  *
  *  @param text 信息内容
@@ -50,28 +91,26 @@
  */
 + (void)show:(NSString *)text icon:(NSString *)icon view:(UIView *)view
 {
-    if (view == nil) view = [[UIApplication sharedApplication].windows lastObject];
-    // 快速显示一个提示信息
-//    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
-//    hud.labelText = text;
-//    // 设置图片
-//    hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"MBProgressHUD.bundle/%@", icon]]];
-//    // 再设置模式
-//    hud.mode = MBProgressHUDModeCustomView;
-//    
-//    // 隐藏时候从父控件中移除
-//    hud.removeFromSuperViewOnHide = YES;
-//    
-//    // 1秒之后再消失
-//    [hud hide:YES afterDelay:0.7];
+    if (view == nil) {
+        view = [[UIApplication sharedApplication].windows lastObject];
+    }
+
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
-    hud.label.font = [UIFont systemFontOfSize:16];
-    hud.bezelView.color = [UIColor colorWithWhite:0 alpha:0.8];
-    hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
-    hud.bezelView.layer.cornerRadius =10;
-    hud.contentColor = [UIColor whiteColor];
-    [hud nf_showAnimated:true];
-    [hud hideAnimated:// afterDelay:<#(NSTimeInterval)#>]
+    hud.label.text = text;
+    hud.label.font = [MBProgressHUD appearance].label.font;
+    hud.bezelView.color = [MBProgressHUD appearance].bezelView.color;
+    hud.bezelView.style = [MBProgressHUD appearance].bezelView.style;
+    hud.bezelView.layer.cornerRadius = [MBProgressHUD appearance].bezelView.layer.cornerRadius;
+    hud.removeFromSuperViewOnHide = [MBProgressHUD appearance].removeFromSuperViewOnHide;
+    hud.contentColor = [MBProgressHUD appearance].contentColor;
+    hud.userInteractionEnabled = NO;
+    
+    if (icon.length) {
+        hud.mode = MBProgressHUDModeCustomView;
+        hud.customView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:icon]];
+    }
+    
+    [hud hideAnimated:true afterDelay:3.0];
 }
 
 /**
@@ -92,7 +131,7 @@
  */
 + (void)showSuccess:(NSString *)success toView:(UIView *)view
 {
-    [self show:success icon:@"success.png" view:view];
+    [self show:success icon:@"success" view:view];
 }
 
 /**
@@ -111,7 +150,7 @@
  *  @param view  需要显示信息的视图
  */
 + (void)showError:(NSString *)error toView:(UIView *)view{
-    [self show:error icon:@"error.png" view:view];
+    [self show:error icon:@"error" view:view];
 }
 
 /**
@@ -121,7 +160,7 @@
  *
  *  @return 直接返回一个MBProgressHUD，需要手动关闭
  */
-+ (MBProgressHUD *)showMessage:(NSString *)message
++ (void)showMessage:(NSString *)message
 {
     return [self showMessage:message toView:nil];
 }
@@ -134,16 +173,17 @@
  *
  *  @return 直接返回一个MBProgressHUD，需要手动关闭
  */
-+ (MBProgressHUD *)showMessage:(NSString *)message toView:(UIView *)view {
++ (void)showMessage:(NSString *)message toView:(UIView *)view {
     if (view == nil) view = [[UIApplication sharedApplication].windows lastObject];
-    // 快速显示一个提示信息
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
-    hud.labelText = message;
-    // 隐藏时候从父控件中移除
-    hud.removeFromSuperViewOnHide = YES;
-    // YES代表需要蒙版效果
-    hud.dimBackground = YES;
-    return hud;
+    
+    // Set the annular determinate mode to show task progress.
+    hud.mode = MBProgressHUDModeText;
+    hud.label.text = NSLocalizedString(@"Message here!", @"HUD message title");
+    // Move to bottm center.
+    hud.offset = CGPointMake(0.f, MBProgressMaxOffset);
+    
+    [hud hideAnimated:YES afterDelay:3.f];
 }
 
 /**
