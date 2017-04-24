@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         
+        
     }
 
     func applicationDidEnterBackground(application: UIApplication) {
